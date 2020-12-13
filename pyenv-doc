@@ -1,0 +1,21 @@
+brew install pyenv
+brew upgrade pyenv
+# insert it to .zshrc
+eval "$(pyenv init -)"
+
+brew install pyenv-virtualenv
+# insert it to .zshrc
+eval "$(pyenv virtualenv-init -)"
+
+# commands
+pyenv versions : check versions
+pyenv install {version} : install python with version 
+python --version : check python version 
+pyenv global {version} : set global version
+pyenv local {version} : set local version
+
+pyenv virtualenv {version} {virtualenv-name}
+pyenv activate {virtualenv-name}
+pyenv deactivate
+pyenv uninstall  {version}/{virtualenv-name}
+
